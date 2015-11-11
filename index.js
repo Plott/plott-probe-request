@@ -34,7 +34,7 @@ module.exports = function(callback) {
     }
   });
 
-  child.on('error', function (err) {
+  tcpdump.on('error', function (err) {
     console.log('Failed to start child process.');
     return callback(err, null);
   });
