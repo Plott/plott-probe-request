@@ -16,7 +16,7 @@ var spawn = require('child_process').spawn;
  */
 
 module.exports = function(callback) {
-  var tcpdump = spawn('tcpdump', ['tcpdump -I -e -i wlan1 -s 256 type mgt subtype probe-req']);
+  var tcpdump = spawn('tcpdump', ['-I -e -i wlan1 -s 256 type mgt subtype probe-req']);
 
   tcpdump.stdout.on('data', function (data) {
     console.log('tcpdump data: ' + data);
