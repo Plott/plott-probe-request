@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo service ifplugd stop
 sudo ifconfig wlan1 down
